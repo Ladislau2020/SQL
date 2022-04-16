@@ -117,3 +117,5 @@ SELECT
 	max(price) AS maximun_price
 FROM
 	automobile_data;
+
+
