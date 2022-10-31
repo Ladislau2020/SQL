@@ -417,6 +417,85 @@ select * from capoeristas;
 
 
 
+/*
+
+Adicionando os dados das presenças e faltas
+
+*/
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (27, 15, 1001);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (36, 6, 1003);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (35, 7, 1004);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (19, 23, 1006);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (33, 9, 1006);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (39, 3, 1007);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (23, 19, 1009);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (28, 14, 1010);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (36, 6, 1014);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (36, 6, 1015);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (38, 4, 1016);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (32, 10, 1017);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (17, 25, 1018);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (40, 2, 1024);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (9, 4, 1027);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (20, 22, 1033);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (18, 1, 1034);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (13, 29, 1036);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (14, 28, 1037);
+
+INSERT INTO assiduidade (presencas, faltas, capoeristas_idcapoerista)
+VALUES (13, 29, 1038);
+
+
+-- Verificando se os dados da tabela capoeristas condiz com os dados de assiduidade
+select * from assiduidade as a
+inner join capoeristas as c
+where a.capoeristas_idcapoerista = c.idcapoerista;
+
+
+
+/*
+Precisei adicionar uma coluna nova em graduações que é a categoria
+*/
+alter table graduacoes
+add column categoria varchar(250) not null;
+
 
 
 
